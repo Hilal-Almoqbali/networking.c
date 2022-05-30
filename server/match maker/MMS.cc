@@ -6,10 +6,25 @@
 
 int main (void)
 {
+    // pointer demo to FILE
+    FILE* myport;
+    int display;
+ 
+    // Creates a file "demo_file"
+    // with file access as read mode
+    myport = fopen("myport.txt", "r");
+    char array[] = "YOUR TEXT HERE";
+    int results = fputs(array, myport);
+    if (results == EOF) 
+    {
+    // Failed to write do error code here.
+    }
+    fclose(myport);
+/*
     //  Socket to talk to clients
     void *context = zmq_ctx_new ();
     void *responder = zmq_socket (context, ZMQ_REP);
-    int rc = zmq_bind (responder, "tcp://*:5555");
+    int rc = zmq_bind (responder, "");
     assert (rc == 0);
 
     while (1) {
@@ -21,3 +36,16 @@ int main (void)
     }
     return 0;
 }
+
+
+ 
+
+ 
+    // pointer demo to FILE
+    FILE* demo;
+    int display;
+ 
+    // Creates a file "demo_file"
+    // with file access as read mode
+    demo = fopen("demo_file.txt", "r");
+    */
