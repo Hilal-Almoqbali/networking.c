@@ -20,7 +20,7 @@ int main (void)
     // Failed to write do error code here.
     }
     fclose(myport);
-    printf(array);
+    printf("%s",array);}
 /*
     //  Socket to talk to clients
     void *context = zmq_ctx_new ();
