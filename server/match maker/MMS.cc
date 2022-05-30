@@ -13,13 +13,14 @@ int main (void)
     // Creates a file "demo_file"
     // with file access as read mode
     myport = fopen("myport.txt", "r");
-    char array[] = "YOUR TEXT HERE";
+    char array[20];
     int results = fputs(array, myport);
     if (results == EOF) 
     {
     // Failed to write do error code here.
     }
     fclose(myport);
+    printf(array);
 /*
     //  Socket to talk to clients
     void *context = zmq_ctx_new ();
