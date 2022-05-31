@@ -3,7 +3,8 @@ int main (void)
 {
 
 
-    
+
+
     while(1)
     {
     zsock_t *push = zsock_new_push ("inproc://example");
