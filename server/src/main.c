@@ -1,7 +1,8 @@
 #include <czmq.h>
 int main (void)
 {
-    
+    while(1)
+    {
     zsock_t *push = zsock_new_push ("inproc://example");
     zsock_t *pull = zsock_new_pull ("inproc://example");
     zstr_send (push, "Hello, World");
@@ -13,4 +14,5 @@ int main (void)
     zsock_destroy (&pull);
     zsock_destroy (&push);
     return 0;
+    }
 }
