@@ -7,14 +7,15 @@
 #include <readfile.h>
 
 
-char* readfile();
+
 
 int main (void)
 {
-    system("./script/python myport.py");
-    char* port = readfile("myport.txt");
+    //system("../script/python myport.py");
+    char* port = readfile("./server/conf/myport.txt");
     printf("%s",port);
-
+}
+/*
     //  Socket to talk to clients
     void *context = zmq_ctx_new ();
     void *responder = zmq_socket (context, ZMQ_REP);
@@ -33,7 +34,7 @@ int main (void)
 }
 
 
- 
+ */
 
  
    
