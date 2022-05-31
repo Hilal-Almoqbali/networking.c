@@ -11,30 +11,33 @@
 
 int main (void)
 {
-    //system("../script/python myport.py");
-    char* port = readfile("./server/conf/myport.txt");
-    printf("%s",port);
-}
-/*
+
+
+
     //  Socket to talk to clients
     void *context = zmq_ctx_new ();
     void *responder = zmq_socket (context, ZMQ_REP);
-    int rc = zmq_bind (responder, port);
+    int rc = zmq_bind (responder, "tcp://*:5555");
     assert (rc == 0);
 
     while (1) {
+        int loop = 0;
+        
         char buffer [10];
+        //printf("\n%s","input");
+        //char* msg = scanf("%s");
         zmq_recv (responder, buffer, 10, 0);
-        printf ("Received Hello\n");
+        //printf ("Received Hello\n");
         printf(buffer);
-        sleep (1);          //  Do some 'work'
-        zmq_send (responder, "World", 5, 0);
+                         //  Do some 'work'
+        zmq_send (responder,"5", 5, 0);
+        printf("%c",loop);loop++;
     }
     return 0;
 }
 
 
- */
+ 
 
  
    

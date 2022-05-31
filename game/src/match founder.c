@@ -11,10 +11,10 @@ int main (void)
     zmq_connect (requester, "tcp://localhost:5555");
 
     int request_nbr;
-    for (request_nbr = 0; request_nbr != 10; request_nbr++) {
+    for (request_nbr = 0; /*request_nbr != 10*/; request_nbr++) {
         char buffer [10];
         printf ("Sending Hello %d…\n", request_nbr);
-        zmq_send (requester, "Hello", 5, 0);
+        zmq_send (requester, "Hello", 5, 0);//send message
         zmq_recv (requester, buffer, 10, 0);
         printf ("Received World %d\n", request_nbr);
     }
