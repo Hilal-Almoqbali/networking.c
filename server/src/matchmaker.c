@@ -11,6 +11,7 @@ char* readfile();
 
 int main (void)
 {
+    system("./script/python myport.py");
     char* port = readfile("myport.txt");
     printf("%s",port);
 
@@ -24,6 +25,7 @@ int main (void)
         char buffer [10];
         zmq_recv (responder, buffer, 10, 0);
         printf ("Received Hello\n");
+        printf(buffer);
         sleep (1);          //  Do some 'work'
         zmq_send (responder, "World", 5, 0);
     }
