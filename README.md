@@ -1,2 +1,4 @@
 # networking.c </br>
-https://zeromq.org/languages/c/
+used zeromq lib https://zeromq.org/languages/c/ </br>
+
+
